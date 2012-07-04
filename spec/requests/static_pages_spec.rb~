@@ -4,15 +4,15 @@ describe "Static pages" do
 
   describe "Home page" do
 
-    it "should have the h1 'LMS App'" do
+    it "should have the h1 'LMS App home'" do
       visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'LMS App')
+      page.should have_selector('h1', :text => 'LMS App home')
     end
 
     it "should have the title 'Home'" do
       visit '/static_pages/home'
       page.should have_selector('title',
-                        :text => "Library Management System | Home")
+                        :text => "Library Management System")
     end
   end
 
