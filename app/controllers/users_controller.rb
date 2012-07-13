@@ -7,14 +7,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
- def create
+def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "Welcome to the Library store !"
+      sign_in @user
+      flash[:success] = "Welcome to Online Library Managament System!"
       redirect_to @user
     else
       render 'new'
     end
   end
-
 end
